@@ -1,0 +1,137 @@
+		0x0000 - 0x0013 COMPVARS
+
+General
+
+	Bitrate (kilobits per sec)
+		0x0014Å`0x0017
+		0Å`4294967295
+
+	Mode
+		0x00b8
+		0 - Realtime / Live Encoding
+		1 - Good Quality Fast Encoding
+		2 - One Pass - Best Quality
+		3 - Two Pass - First Pass
+		4 - Two Pass - Second Pass - Good Quality
+		5 - Two Pass - Second Pass - Best Quality
+
+	End Usage
+		0x00bc
+		0 - Stream From A Server (CBR)
+		1 - Local File Playback (VBR)
+
+	Material
+		0x0064
+		0 - Progressive
+		1 - Interlaced
+
+	Noise Reduction
+		0x003c
+		0(Off)Å`6(Extreme)
+
+	Sharpness
+		0x00c0
+		0(Low)Å`10(High)
+
+	Auto Keyframe
+		0x002c
+		0 - False
+		1 - True
+
+	Max Frame Btw Keys
+		0x0038Å`0x003b
+		0Å`2147483647
+
+
+Advanced
+
+	Datarate Control
+
+		Undershoot (% target)
+			0x0098
+			50Å`100
+
+		Adjust Quantizer
+			0x0068
+			0 - True
+			1 - False
+
+			Minimum
+				0x0094
+				0Å`63
+
+			Maximum
+				0x0018
+				0Å`63
+
+		Temporal Resampling
+			0x0040
+			0 - False
+			1 - True
+
+			Down Watermark %
+				0x0074
+				0Å`100
+
+		Spatial Resampling
+			0x0x0044
+			0 - True
+			1 - False
+
+			Down Watermark %
+				0x0078
+				0Å`100
+
+			Up Watermark %
+				0x007c
+				0Å`100
+
+	Streaming Parameters
+
+		Peak Bitrate (as % targ)
+			0x009cÅ`0x009e
+			0Å`99999
+
+		Prebuffer (secs)
+			0x006c
+			0Å`30
+
+		Optimal Buffer (secs)
+			0x0070
+			0Å`30
+
+		Max Buffer (secs)
+			0x00a0
+			0Å`30
+
+	Two Pass Section Datarate
+
+		Valiability
+			0x00a8
+			0Å`100
+
+		Min Section (as % targ)
+			0x00b0
+			0Å`100
+
+		Max Section (as % targ)
+			0x00acÅ`0x00ad
+			100Å`1000
+
+
+Settings
+
+	Settings File
+		0x02f7Å`0x04f6
+		(512bytes)
+
+	First Pass File
+		0x00c8Å`0x02c7
+		(512bytes)
+
+	Delete After Use
+		0x00c4
+		0 - False
+		1 - True
+
+
